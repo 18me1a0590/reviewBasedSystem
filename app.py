@@ -4,8 +4,8 @@ from datetime import *
 import psycopg2
 
 app = Flask(__name__)
-app.config['SQLALCHEMY_DATABASE_URI'] = "postgres://gidiwjbddibnva:525d37bc48f1c40aa77de055ec585981ff81220fa1cca6140884a4debd515039@ec2-50-17-255-120.compute-1.amazonaws.com:5432/df188lhsv03uah"
-#postgres://gidiwjbddibnva:525d37bc48f1c40aa77de055ec585981ff81220fa1cca6140884a4debd515039@ec2-50-17-255-120.compute-1.amazonaws.com:5432/df188lhsv03uah
+app.config['SQLALCHEMY_DATABASE_URI'] = "postgres://bbtxcnrrzdkolb:1a68bc2fa1c1901d344a22e3481bbd33e39aa02327e16d350e6d1acd385d5f6a@ec2-52-5-1-20.compute-1.amazonaws.com:5432/datk6k64lri1r6"
+# postgres://bbtxcnrrzdkolb:1a68bc2fa1c1901d344a22e3481bbd33e39aa02327e16d350e6d1acd385d5f6a@ec2-52-5-1-20.compute-1.amazonaws.com:5432/datk6k64lri1r6
 app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
 app.config['SECRET_KEY'] = 'thisismykey'
 db = SQLAlchemy(app)
