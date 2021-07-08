@@ -1,0 +1,127 @@
+@import url(https://fonts.googleapis.com/css?family=Oswald:400);
+
+.navigation {
+  width: 100%;
+  background-color: black;
+  
+}
+
+img {
+  width: 25px;
+  border-radius: 50px;
+  float: left;
+}
+
+.logout {
+  font-size: .8em;
+  font-family: 'Oswald', sans-serif;
+	position: relative;
+  right: -18px;
+  bottom: -4px;
+  overflow: hidden;
+  letter-spacing: 3px;
+  opacity: 0;
+  transition: opacity .45s;
+  -webkit-transition: opacity .35s;
+  
+}
+
+.button {
+	text-decoration: none;
+	float: right;
+  padding: 12px;
+  margin: 15px;
+  color: white;
+  width: 25px;
+  background-color: black;
+  transition: width .35s;
+  -webkit-transition: width .35s;
+  overflow: hidden
+}
+
+/* a:hover {
+  width: 100px;
+} */
+
+a:hover .logout{
+  opacity: .9;
+}
+
+a {
+  text-decoration: none;
+}
+
+  .card{
+    position:relative;
+    width:400px;
+    height:auto;
+    padding:3rem;
+    gap:20px;
+    background:#231E3E;
+    border-radius:8px;
+    display:flex;
+    flex-direction:column;
+    box-shadow:2px 4px 8px rgba(0,0,0,.3);
+    
+  }
+  .card h3{
+    color:#fff;
+    padding:1rem;
+    text-align:center;
+  }
+  .rating-container {
+    background:#3f3963;
+    padding:1.2rem;
+    display:flex;
+    flex-direction:column;
+  /*   margin: 0 20px; */
+    text-align:center;
+    color:#fff;
+  }
+  .rating{
+    display:flex;
+    justify-content:space-between;
+    padding:1rem;
+    position:relative;
+  }
+  .rating svg{
+    width:35px;
+    height:35px;
+    color:gray;
+  }
+  .rating svg:hover {
+    color:#ede73b;
+  /*   position:absolute; */
+    fill:currentColor;
+  }
+  
+  .btn{
+    padding:.8rem;
+    border:none;
+    background-color: #4158D0;
+    background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
+    color:#fff;
+    text-transform:uppercase;
+    letter-spacing:1px;
+    border-radius:4px;
+    cursor:pointer;
+    transition:background-color .2s ease-in-out;
+  }
+  .btn:hover{
+    background-color: #4158D0;
+  background-image: linear-gradient(225deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
+  box-shadow:2px 3px 10px rgba(255,255,255,.2);
+  
+    
+  }
+  .link{
+    text-decoration:none;
+    text-align:center;
+    color:#dbd7d7;
+    font-size:12px;
+  }
+  .cancel{
+    position:absolute;
+    top:10px;
+    right:15px;
+  }

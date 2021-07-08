@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Login User</title>
+  <link rel="stylesheet" type="text/css" href="../static/css/admin.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+    integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+    integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+    crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <div class="container">
+    
+  <div class="kotak_login">
+    <p class="tulisan_login">User Login</p>
+
+    <img src="https://image.flaticon.com/icons/png/512/1148/1148870.png" alt="coffee">
+
+    {%if msg%}
+    <div class="alert alert-{{col}} alert-dismissible fade show" role="alert">
+      <strong>Oops!</strong> {{msg}}
+      <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+    {%endif%}
+
+      <form action="/userlogin" method = "post">
+        <label>Username</label>
+        <input type="text" name="username" class="form_login" placeholder="Please enter the username.." required>
+
+        <label>Password</label>
+        <input type="password" name="password" id="pass" class="form_login" placeholder="Password .." required>
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" onclick="Toggle()">
+          <label class="form-check-label" for="flexCheckDefault">
+            Show Password  
+          </label>
+         <a href="/useregister" rel="noopener noreferrer" style="float: right;">register new account</a><br>
+        </div>
+        <br>
+
+        <input type="submit" class="tombol_login" value="LOGIN">
+      </form>
+
+  </div>
+</div>
+
+  <script>
+    // Change the type of input to password or text
+        function Toggle() {
+          var temp
+           temp = document.getElementById("pass");
+            if (temp.type === "password") {
+                temp.type = "text";
+            }
+            else {
+                temp.type = "password";
+            }
+        }
+</script>
+</script>
+</body>
+
+</html>
