@@ -179,6 +179,26 @@ def adminreviews():
      happy.extend(sad)
      c=len(happy)
      return render_template("admindash.html",count=c,data=happy)
+@app.route("/admin/Reviews")
+def adreviews():
+     reviews=[]
+     
+     users = Reviews.query.all()
+     for i in users :
+         example = [i.review]
+         result = model.predict(example)
+         if result==["happy"] :
+             reviews.append([i.user_name,i.review,'Happy Review'])
+         else :
+             reviews.append([i.user_name,i.review,'Not Happy Review'])
+     c=len(reviews)
+     return render_template("processdata.html",count=c,data=reviews)
+
+
+@app.route("/collection")
+def collect():
+     return render_template("collection.html")
+
 
 if __name__ == '__main__':
     db.create_all()
