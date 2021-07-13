@@ -178,7 +178,8 @@ def adminreviews():
              sad.append([i.user_name,i.review])
      happy.extend(sad)
      c=len(happy)
-     return render_template("admindash.html",count=c,data=happy)
+     u=len(users)
+     return render_template("admindash.html",count=c,data=happy,user=u)
 @app.route("/admin/Reviews")
 def adreviews():
      reviews=[]
