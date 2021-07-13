@@ -46,7 +46,6 @@
                     <div class="nav">
                         <div class="sb-sidenav-menu-heading">
                             <a class="nav-link" style="color: rgb(202, 201, 201);" href="/userlogin">
-
                                 Logout
                             </a>
                         </div>
@@ -75,19 +74,19 @@
                 <div class="container-fluid px-4">
                     <h1 class="mt-4">Hello {{user.user_name}} </h1>
                     <ol class="breadcrumb mb-4">
-                        <li class="breadcrumb-item active">Tell us your Experiance</li>
+                        <li class="breadcrumb-item active">Tell us your Experience</li>
                     </ol>
                     <center>
                         <div class="card">
-                            <h3>Tell us your Experiance</h3>
+                            <h3>Tell us your Experience</h3>
                             <div class="rating-container">
                                 <small>Please give the feedback.</small>
 
 
                             </div>
 
-
-                            <a class="link" href="#">Add a comment</a>
+<!-- 
+                            <a class="link" href="#">Add a comment</a> -->
                             <form action="/postcomment" method="post">
                                 <input type="hidden" name="username" value={{user.user_name}}>
                                 <textarea name="re" rows="3" cols="40"></textarea>
