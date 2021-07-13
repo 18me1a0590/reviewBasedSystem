@@ -66,10 +66,10 @@ db = SQLAlchemy(app)
 
 # confusion_matrix(predictions, DV_test)
 
-# import pickle
+import pickle
 
-# # load model
-# model = pickle.load(open('model.pkl','rb'))
+# load model
+model = pickle.load(open('model.pkl','rb'))
 
 #-------------------------------DATABASE CREATION------------------------------------------------
 #-------------------------------TABLE CREATION---------------------------------------------------
@@ -171,11 +171,11 @@ def adminreviews():
      users = Reviews.query.all()
      for i in users :
          example = [i.review]
-#          result = model.predict(example)
-#          if result==["happy"] :
-         happy.append([i.user_name,i.review])
-#          else :
-#              sad.append([i.user_name,i.review])
+         result = model.predict(example)
+         if result==["happy"] :
+                happy.append([i.user_name,i.review])
+         else :
+             sad.append([i.user_name,i.review])
      happy.extend(sad)
      c=len(happy)
      return render_template("admindash.html",count=c,data=happy)
