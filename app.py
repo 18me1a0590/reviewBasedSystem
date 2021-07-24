@@ -140,7 +140,7 @@ def useregister():
               db.session.add(pro)
               db.session.commit()
               return render_template("user.html",msg="Your account created successfully plzz login !!",col='success')
-          return render_template("register.html",msg=" This Email have already account go to login page !! ",col="warning")  
+          return render_template("user.html",msg=" This Email have already account go to login page !! ",col="warning")  
       return render_template("register.html",msg=" Confirm Password is not same !! ",col="danger")
 
 
